@@ -42,7 +42,7 @@ scope: -- system -> tất cả người dùng
 
 
 -cách lấy dữ liệu từ github về máy sửa lại rồi đẩy lên: 
-
+ chưa cấu hình global thì cấu hình global
 B1: git clone [đường link]
 B2: git config user.name " "
     git config user.email " "
@@ -61,3 +61,7 @@ B4: git remote add origin
 B5: git config -local user.name "..."
     git config -local user.email "..."
 B6: git push -u origin main (k được thì thêm git pull--rebase origin main)
+
+
+chuyển đổi giữa các commit(làm việc với các version trước đó) 
+git checkout <commit_hash> 
