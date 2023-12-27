@@ -1,0 +1,63 @@
+diff file1 file 2: so sánh khác biệt giữa 2 file 
+
+rm "Filename" : xoá file
+
+rm -d "FolderName": xoá folder
+
+git --help : hiển thị các câu lệnh gợi ý của git
+
+git --version : xem thông tin version của git
+
+git status : trạng thái của kho lưu trữ
+
+git log: hiển thị lịch sử các commit
+
+git init [RepoName]: tạo ra một kho lưu trữ có tên RepoName
+
+git clone [repoName][cloneName]: tạo một bản sao được liên kết với repo 
+
+git config -l (--global || --local): xem cấu hình hiện tại
+
+git config -l [--scope][option_name][value]:
+scope: -- system -> tất cả người dùng
+       -- global -> liên quan đến repo(s)
+       -- local -> liên quan đến 1 repo
+
+
+ git config --global(--local) user.name "..."
+ git config --global(--local) email.name "..."
+ 
+ git add [file name] : thêm tệp cụ thể
+ git add . : thêm tất cả các tệp
+ 
+ git commit -m "Nội dung" : tạo commit -> repo
+ 
+ git diff: So sánh với commit cuối cùng
+ 
+ git fetch: lấy các thông tin về commit mới từ repo
+ 
+ git pull: lấy dữ liệu từ repo về local repo
+
+ git push : đẩy các commit từ local về central repo
+
+
+-cách lấy dữ liệu từ github về máy sửa lại rồi đẩy lên: 
+
+B1: git clone [đường link]
+B2: git config user.name " "
+    git config user.email " "
+B3: check: git pull(k cần)
+B4: sửa code
+B5: git add .
+B6: git commit -m "..."
+B7: git push
+
+-cách đẩy dữ liệu gốc từ máy lên: 
+B1: git init [tên repo]
+B2: git add .(hoặc tên file)
+B3: git commit -m "..."
+B4: git remote add origin
+(git branch)
+B5: git config -local user.name "..."
+    git config -local user.email "..."
+B6: git push -u origin main (k được thì thêm git pull--rebase origin main)
